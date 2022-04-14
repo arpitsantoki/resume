@@ -873,7 +873,10 @@
                     <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                         <div class="mh-map">
                             <div class="shadow-1">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d120354.74410732527!2d70.79145305427787!3d22.26312732240329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1649957998449!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d120354.74410732527!2d70.79145305427787!3d22.26312732240329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1649957998449!5m2!1sen!2sin"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -904,6 +907,34 @@
     * JS Files *
     ==============
     -->
+
+    <script>
+        // ikqvmkoxykhtrhqk
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "santokiarpit0@gmail.com",
+                Password: "ikqvmkoxykhtrhqk",
+                To: "santokiarpit0@gmail.com",
+                From: $("#email").val(),
+                Subject: $("#subject").val(),
+                Body: $("#message").val()
+            }).then(
+                (message) => {
+                    console.log(message);
+                    alert("Mail has been successfully sent.")
+                    $("#firstname").val("")
+                    $("#lastname").val("")
+                    $("#email").val("")
+                    $("#subject").val("")
+                    $("#message").val("")
+                }
+            );
+
+
+        }
+
+    </script>
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
