@@ -915,16 +915,11 @@
                 To: "santokiarpit0@gmail.com",
                 From: $("#email").val(),
                 Subject: $("#subject").val(),
-                Body: $("#message").val()
+                Body: $("#firstname").val() + $("#lastname").val() + $("#message").val()
             }).then(
                 (message) => {
                     console.log(message);
                     alert("Mail has been successfully sent.")
-                    $("#firstname").val("")
-                    $("#lastname").val("")
-                    $("#email").val("")
-                    $("#subject").val("")
-                    $("#message").val("")
                 }
             );
 
